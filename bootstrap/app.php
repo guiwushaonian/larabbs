@@ -12,7 +12,7 @@
 */
 
 // 引入自定义辅助函数库
-require __DIR__ . 'helpers.php';
+require __DIR__ . '/helpers.php';
 
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__ . '/../')
