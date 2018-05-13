@@ -16,3 +16,25 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/*$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1', function($api) {
+    $api->get('version', function() {
+        //return response('this is version v1');
+        $sms = app('easysms');
+
+        try{
+            $sms->send(15549432750,[
+                'template' => 'SMS_79075002',
+                'data' => [
+                    'number' => 66666
+                ],
+            ]);
+        } catch (\GuzzleHttp\Exception\ClientException $exception) {
+            $response = $exception->getResponse();
+            $result = json_decode($response->getBody()->getContents(), true);
+            dd($result);
+        }
+    });
+});*/
